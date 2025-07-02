@@ -1,79 +1,64 @@
-# Custom Enumerable Project
+# <img src="https://raw.githubusercontent.com/dsbfelipe/readme-banners/main/images/odin-project.png">
 
-This repository complements the [Custom Enumerables Project](https://www.theodinproject.com/lessons/ruby-custom-enumerables) in the Ruby Course for The Odin Project. The goal of this project is to reimplement common methods used frequently through the enumerables module with objects like arrays and hashes. This project will also familiarize you with how to work with blocks and procs. Some starter code and specs are provided to validate the correctness of your solutions.
+<img align="right" src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white">
 
-## Installation
+<br>
+<br>
 
-First, clone this repository with
+The Custom Enumerable project is all about demystifying Ruby’s powerful `Enumerable` module by recreating its most commonly used methods from scratch. Instead of relying on built-in iterators, this project shows how blocks, `yield`, and custom method definitions work under the hood.
 
-```bash
-git clone git@github.com:TheOdinProject/custom_enumerable_project.git
-```
+This project is part of my journey through the Ruby course and helped strengthen my understanding of iterators, blocks, modules, and test-driven development.
 
-Then, navigate into the folder through your command line with
+## 📝 Project Objective
 
-```bash
-cd custom_enumerable_project
-```
+The goal of this project was to recreate popular `Enumerable` methods like `each`, `map`, `select`, and `inject`. By doing so, I gained a deeper appreciation for how Ruby handles iteration and block execution behind the scenes.
 
-and install the dependencies using the command
+Each method was implemented to work primarily with arrays (and optionally with hashes for an extra challenge). Before writing each method, I ran the provided RSpec tests to watch them fail, then wrote the method until all tests passed.
 
-```bash
-bundle install
-```
+The project emphasizes not only method implementation but also understanding Ruby’s `yield` keyword and how to reopen existing modules and classes.
 
-## Getting Started
+## 🔧 Features
 
-You will add new methods to the `Enumerable` module in `lib/my_enumerables.rb`. Before you implement a method, go to the corresponding spec file and watch the test fail by running
+- **Rebuilt Enumerable Methods**: Reimplemented several core methods, including:
 
-```bash
-bundle exec rspec <spec_file>
-```
+  - `each`
 
-You can find the associated spec file in the [methods section](#methods). Then, add the method to the enumerable module. Run the tests again using the same command until they pass.
+  - `each_with_index`
 
-### Example
+  - `select`
 
-As an example, before you start implementing the `my_each` method, run
+  - `all?`
 
-```bash
-bundle exec rspec spec/my_each_spec.rb
-```
+  - `any?`
 
-to see that the test fails as expected.
+  - `none?`
 
-Once you implement it, like so:
+  - `count`
 
-```rb
-# lib/my_enumerables.rb
+  - `map`
 
-class Array
-  def my_each
-    # Complete code
-  end
-end
-```
+  - `inject`
 
-run the command
+- **RSpec Testing**: Each method was verified against a test suite to ensure identical behavior to the original Ruby methods.
 
-```bash
-bundle exec rspec spec/my_each_spec.rb
-```
+- **Blocks & Procs Practice**: Improved understanding of passing blocks and calling yield.
 
-again to see if your code is correct or not.
+## 📖 Learnings
 
-### Methods
+- **Metaprogramming Basics**: Practiced extending and reopening core Ruby modules and classes.
 
-The following table has the methods you will need to implement along with their associated specs, as outlined in the project instructions. The methods in the Enumerable module only need to work with Arrays, but you can challenge yourself and try to make them work for Hashes as well.
+- **Yield & Blocks**: Improved understanding of how `yield` hands off execution to blocks.
 
-| Method                          | Spec File                       | Notes                                                                 |
-| ------------------------------- | ------------------------------- | --------------------------------------------------------------------- |
-| `Array#my_each`                 | spec/my_each_spec.rb            | You will define my_each on the Array class in `lib/my_enumerables.rb` |
-| `Enumerable#my_each_with_index` | spec/my_each_with_index_spec.rb |                                                                       |
-| `Enumerable#my_select`          | spec/my_select_spec.rb          |                                                                       |
-| `Enumerable#my_all?`            | spec/my_all_spec.rb             |                                                                       |
-| `Enumerable#my_any?`            | spec/my_any_spec.rb             |                                                                       |
-| `Enumerable#my_none?`           | spec/my_none_spec.rb            |                                                                       |
-| `Enumerable#my_count`           | spec/my_count_spec.rb           |                                                                       |
-| `Enumerable#my_map`             | spec/my_map_spec.rb             |                                                                       |
-| `Enumerable#my_inject`          | spec/my_inject_spec.rb              
+- **Testing with RSpec**: Practiced test-driven development by letting tests guide each implementation.
+
+- **Enumerable Internals**: Gained insight into how Ruby’s iteration methods actually work.
+
+## 💻 Technologies Used
+
+- **Ruby** for implementing the functionality of the substrings method.
+
+- **RSpec** for testing and validating each custom method.
+
+## 💡 Acknowledgments
+
+- **The Odin Project**: For providing the project outline and guidance.
